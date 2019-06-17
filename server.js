@@ -3,7 +3,7 @@ const avatarsMiddleware = require('adorable-avatars');
 
 const app = express();
 app.get('/healthz', (req, res) => {
-  res.send("OK");
+  res.json({"health": "ok"});
 });
 app.use('/api', avatarsMiddleware);
 
